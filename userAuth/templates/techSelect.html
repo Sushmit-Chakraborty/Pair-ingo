@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Tech select page</h1>
+<form action="{% url 'addTech' %}" method="post">
+    {% csrf_token %}
+  <label for="tech-select">Select a technology:</label>
+  <select id="tech-select" name="technology">
+    <option value="python">Python</option>
+    <option value="java">Java</option>
+    <option value="javascript">JavaScript</option>
+  </select>
+  <input type="submit" value="Submit">
+</form>
+{% endblock %}
